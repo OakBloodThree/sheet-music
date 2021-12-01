@@ -55,8 +55,6 @@ lower = \relative c {
 
   a2 c f d
   c b c d
-  a c f d
-  c b c d
 }
 
 \score {
@@ -66,13 +64,9 @@ lower = \relative c {
       \new Staff = "lower" \loweri
     >>
   >>
-  \layout {
-    \context { \Staff \RemoveEmptyStaves }
   }
-  \midi { }
-}
-
-\score {
+ 
+   \score {
   <<
     \new Voice = "mel" { \autoBeamOff \melody }
     \new Lyrics \lyricsto mel \text
