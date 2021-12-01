@@ -10,7 +10,8 @@ melody = \relative c'' {
   \key c \major
   \time 4/4
   r1*8 \break
-  a4 b c d
+  r1 |
+  r8 g c c c
 }
 
 text = \lyricmode {
@@ -23,8 +24,8 @@ upper = \relative c {
   \time 4/4
   e4. 8( f4.) 8( | e1) |
   e4. 8( f4.) 8( | e1) |
-  a4. 8( c4.) 8( | d4.) 8( a4.) 8 |
-  a4. 8( c4.) 8( | c2)  a8( g d4 |
+  a4. 8( c4.) 8( | d4.) 8( a2) |
+  a4. 8( c4.) 8( | d2)  a8( g d4 |
   e4.) e8( f4.) f8( | e1) |
   e4. e8( f4.) f8( | e1) |
 
@@ -42,7 +43,13 @@ lower = \relative c, {
   <f c'>4. 8 <f d'>4. 8 |
   <f c'>4. 8 <f d'>2 |
   <f c'>4. 8 <f d'>4. 8 |
-  <f c'>1 |
+  <f c'>1 | \break
+
+ <c g'>4. 8 <c a'>4. 8 |
+  <c g'>4. 8 2 |
+  <c g'>4. 8 <c a'>4. 8 |
+  <c g'>1 |
+
 
 }
 
