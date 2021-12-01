@@ -2,8 +2,8 @@ melody = \relative c'' {
   \clef treble
   \key c \major
   \time 4/4
-
-  a b c d
+  r1 \break
+  a4 b c d
 }
 
 text = \lyricmode {
@@ -14,8 +14,8 @@ upper = \relative c'' {
   \clef treble
   \key c \major
   \time 4/4
-
   a4 b c d
+  a b c d
 }
 
 lower = \relative c {
@@ -24,6 +24,7 @@ lower = \relative c {
   \time 4/4
 
   a2 c
+  a c
 }
 
 \score {
@@ -36,7 +37,7 @@ lower = \relative c {
     >>
   >>
   \layout {
-    \context { \Staff \RemoveEmptyStaves }
+    \context { \Staff \RemoveAllEmptyStaves }
   }
   \midi { }
 }
