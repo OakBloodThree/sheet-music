@@ -1,3 +1,10 @@
+\header {
+  title = "Left the Door Ajar"
+  subtitle = "from \italic {}"
+  subtitle = \markup { "From " \italic "Orion Before Dawn" }
+  composer = "Theodore Kloba/Diane Marie Kloba"
+  poet  = "Diane Marie Kloba"
+}
 melody = \relative c'' {
   \clef treble
   \key c \major
@@ -16,21 +23,26 @@ upper = \relative c {
   \time 4/4
   e4. 8( f4.) 8( | e1) |
   e4. 8( f4.) 8( | e1) |
-  a4. 8( b4.) 8( | c4.) 8( a4.) 8 |
-  a4. 8( b4.) 8( | c2)  a8( g d4 |
+  a4. 8( c4.) 8( | d4.) 8( a4.) 8 |
+  a4. 8( c4.) 8( | c2)  a8( g d4 |
   e4.) e8( f4.) f8( | e1) |
   e4. e8( f4.) f8( | e1) |
 
 }
 
-lower = {
+lower = \relative c, {
   \clef bass
   \key c \major
   \time 4/4
 
-  <c, g,>4. 8 <c, a,>4. 8 |
- <c, g,>4. 8 2 |
-
+  <c g'>4. 8 <c a'>4. 8 |
+  <c g'>4. 8 2 |
+  <c g'>4. 8 <c a'>4. 8 |
+  <c g'>4. 8 2 |
+  <f c'>4. 8 <f d'>4. 8 |
+  <f c'>4. 8 <f d'>2 |
+  <f c'>4. 8 <f d'>4. 8 |
+  <f c'>1 |
 
 }
 
@@ -46,6 +58,6 @@ lower = {
   \layout {
     \context { \Staff \RemoveAllEmptyStaves }
   }
-  \midi { }
+  \midi { \tempo 4 = 80}
 }
 [image of music]
