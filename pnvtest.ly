@@ -51,22 +51,21 @@ pianoL = \relative c {
 }
 
 \score {
-  <<
       \new PianoStaff <<
-      \new Staff = "piaonintroR"
-      \new Staff = "pianointroL"
+      \new Staff = "piaonintroR" \pianointroR
+      \new Staff = "pianointroL" \pianointroL
       >>
-  >>
-
-  <<
-    \new Voice = "Vocal" { \autoBeamOff \melody }
+<<
+    \new Voice = "Vocal" { \autoBeamOff \vox }
     \new Lyrics \lyricsto Vocal \text
     \new PianoStaff <<
-      \new Staff = "upper" \upper
-      \new Staff = "lower" \lower
+      \new Staff = "pianoR" \pianoR
+      \new Staff = "pianoL" \pianoL
   >>
+>>
+
   \layout {
-    \context { \Staff \RemoveAllEmptyStaves }
+    \context { \Staff \RemoveEmptyStaves }
   }
   \midi { }
 }
