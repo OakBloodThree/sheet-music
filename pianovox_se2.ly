@@ -2,7 +2,6 @@ melody = \relative c'' {
   \clef treble
   \key c \major
   \time 4/4
-  r1 \break
   a4 b c d
 }
 
@@ -10,12 +9,24 @@ text = \lyricmode {
   Aaa Bee Cee Dee
 }
 
+upperIntro = \relative c'' {
+  \clef treble
+  \key c \major
+  \time 4/4
+  a4 b c d
+}
+lowerIntro = \relative c {
+  \clef bass
+  \key c \major
+  \time 4/4
+
+  a2 c
+}
 upper = \relative c'' {
   \clef treble
   \key c \major
   \time 4/4
   a4 b c d
-  a b c d
 }
 
 lower = \relative c {
@@ -24,7 +35,19 @@ lower = \relative c {
   \time 4/4
 
   a2 c
-  a c
+}
+
+\score {
+  <<
+     \new PianoStaff <<
+      \new Staff = "upper" \upperIntro
+      \new Staff = "lower" \lowerIntro
+    >>
+  >>
+  \layout {
+    \context { \Staff \RemoveEmptyStaves }
+  }
+  \midi { }
 }
 
 \score {
@@ -37,7 +60,7 @@ lower = \relative c {
     >>
   >>
   \layout {
-    \context { \Staff \RemoveAllEmptyStaves }
+    \context { \Staff \RemoveEmptyStaves }
   }
   \midi { }
 }
