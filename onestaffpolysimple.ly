@@ -4,11 +4,11 @@
 }
 
 \score {
-  \relative c' {
+  \relative c {\clef bass
     <<
-    {c'4 d e f}
+    {e4. 8( f4.) 8( e1)}
     \\
-    {e,2 g}
+    {<c, g'>4. 8 <c a'>4. 8 <c g'>4. 8 2}
     >>
   }
 
